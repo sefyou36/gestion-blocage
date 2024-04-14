@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="loginForm">
+        <h1 class="title">Se Connecter</h1>
+        <label for="email">Adresse e-mail:</label><br>
+        <input type="email" id="email" name="email" required><span class="error" id="emailError"></span><br>
+        <label for="password">Mot de passe:</label><br>
+        <input type="password" id="password" name="password" required><span class="error" id="passwordError"></span><br>
+        <button class="bouton" type="submit">Se connecter</button>
+        <p>Don't have an account? <a href="register.html">Click here to register</a></p>
+    </form>
+    <script src="index.js" defer></script>
+</body>
+</html>

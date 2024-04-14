@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <form id="registerForm">
+        <h1 class="title">S'enregistrer</h1>   
+        <label for="username">Nom:</label><br>
+        <input type="text" id="username" name="username" required><span class="error" id="usernameError"></span><br>
+        <label for="email">Adresse e-mail:</label><br>
+        <input type="email" id="email" name="email" required><span class="error" id="emailError"></span><br>
+        <label for="password">Mot de passe:</label><br>
+        <input type="password" id="password" name="password" required><span class="error" id="passwordError"></span><br>
+        <button class="bouton" type="submit">S'enregistrer</button>
+        <p>Don't have an account? <a href="index.html">Click here to login</a></p>
+    </form>
+    <script src="index.js" defer></script>
+</body>
+</html>

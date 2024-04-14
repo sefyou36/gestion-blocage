@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Form Popup</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="editPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Ajouter une Difficulté</h2>
+            <form id="editForm">
+                <label for="editCategory">Formateur</label><br>
+                <select id="editCategory" name="editCategory">
+                    <option value="Formateur">Mr Abdelaziz</option>
+                    <option value="Bootcamp">Mr Reda</option>
+                </select><br>
+                <label for="editCategory">Bootcamp</label><br>
+                <select id="editCategory" name="editCategory">
+                    <option value="Formateur">MERN Stack</option>
+                    <option value="Bootcamp">Laravel</option>
+                </select><br>
+                <label for="editName">Nom:</label><br>
+                <input type="text" id="editName" name="editName"><br>
+                <label for="editDate">Date de création:</label><br>
+                <input type="text" id="editDate" name="editDate"><br>
+                <label for="editDifficulty">Difficulté rencontrée:</label><br>
+                <input type="text" id="editDifficulty" name="editDifficulty"><br><br>
+                <button type="button" id="addButton" onclick="addToTable()">Ajouter</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="difficultyPopup" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closeDifficultyPopup()">&times;</span>
+          <p id="difficultyContent"></p>
+        </div>
+    </div>
+    <!-- Popup de modification -->
+    <div id="modPopup" class="popup">
+        <div class="popup-content">
+             <span class="close" onclick="closeEditPopup()">&times;</span>
+             <h2>Modifier une Difficulté</h2>
+             <label for="editName">Nom:</label><br>
+             <input type="text" id="modName" name="editName"><br>
+             <label for="editDate">Date de création:</label><br>
+             <input type="text" id="modDate" name="editDate"><br>
+             <label for="editDifficulty">Difficulté rencontrée:</label><br>
+             <input type="text" id="modDifficulty" name="editDifficulty"><br><br>
+             <button id="saveEdit"onclick="saveEditedData()">Enregistrer</button>
+         </div>
+    </div>
+    
+
+    <div class="titleDash">
+        <h1>Student Dashboard</h1>
+        <button class="boutonLogout"><a href="index.html">⎗ Logout</a></button>
+    </div>
+    <table id="myTable">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Date de création</th>
+            <th>Difficulté</th>     
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+
+    <button id="add-button" onclick="openPopup()">Ajouter</button>
+    <script>
+        document.getElementById("saveEdit").addEventListener("click", function() {
+            console.log("Bouton Enregistrer cliqué"); // Ajouter un message pour vérifier si l'événement est déclenché
+            saveEditedData(); // Appeler la fonction saveEditedData()
+        });
+    </script>
+    
+
+    <script src="index.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+<table id="myTable">
+    <thead> 
+        <tr>
+            <th>Nom</th>
+            <th>Date de creation</th>
+            <th>Difficulté</th>
+            <th>Validé</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+        Vos lignes de tableau
+        <tr>
+            <td>Jane Cooper</td>
+            <td>15/03/2024</td>
+            <td>Beginner</td>
+            <td><button class="status-button validated">☑</button></td>
+            <td><button class="edit-button">✎</button></td>
+            <td><button class="status-button unvalidated">🗑️</button></td>
+        </tr>
+        <tr>
+            <td>Floyd Miles</td>
+            <td>29/03/2024</td>
+            <td>Beginner</td>
+            <td><button class="status-button validated">☑</button></td>
+            <td><button class="edit-button">✎</button></td>
+            <td><button>🗑️</button></td>
+        </tr>
+        <tr>
+            <td>Floyd Miles</td>
+            <td>29/03/2024</td>
+            <td>Intermediate</td>
+            <td><button class="status-button unvalidated">☒</button></td>
+            <td><button class="edit-button">✎</button></td>
+            <td><button>🗑️</button></td>
+        </tr>
+    </tbody>
+</table> -->
